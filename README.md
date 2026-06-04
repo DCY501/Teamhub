@@ -59,15 +59,32 @@ npm run dev
 
 执行 `teamhub-backend/init.sql` 创建表结构和初始数据。
 
+## 在线演示
+
+- **公网地址**：`http://124.222.51.177`
+- **API 文档**：`http://124.222.51.177/doc.html`
+
 ## 部署
 
 生产环境部署参考 `云服务器操作指南.md`（本地文档，不在仓库中）。
 
-简要步骤：
-1. 后端打包后上传 jar 到 `/opt/teamhub/`
-2. 前端 `npm run build` 后上传 `dist/` 到 `/var/www/teamhub/dist/`
+**服务器环境**：腾讯云/阿里云 2核4G，Ubuntu 22.04 LTS，Nginx 1.24
+
+**关键路径**：
+| 项目 | 路径 |
+|------|------|
+| 后端 jar | `/opt/teamhub/teamhub-0.0.1-SNAPSHOT.jar` |
+| 后端配置 | `/opt/teamhub/application.yml` |
+| 前端静态文件 | `/var/www/teamhub/dist/` |
+| Nginx 配置 | `/etc/nginx/sites-available/teamhub` |
+| systemd 服务 | `/etc/systemd/system/teamhub.service` |
+| 数据库备份 | `/opt/teamhub/backup/`（每日凌晨 3 点自动备份，保留 7 天） |
+
+**部署流程**：
+1. 后端 `mvn clean package -DskipTests` 产出 jar，上传到 `/opt/teamhub/`
+2. 前端 `npm run build` 产出 `dist/`，上传到 `/var/www/teamhub/dist/`
 3. Nginx 反向代理 `/api` 到本地 8080
-4. systemd 守护进程实现自动重启
+4. `systemctl restart teamhub` 重启后端服务
 
 ## API 文档
 
