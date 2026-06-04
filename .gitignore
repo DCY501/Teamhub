@@ -1,0 +1,20 @@
+# 前端
+teamhub-frontend/node_modules/
+teamhub-frontend/dist/
+teamhub-frontend/.vscode/
+
+# 后端
+teamhub-backend/target/
+teamhub-backend/.idea/
+teamhub-backend/.mvn/
+
+# 报告编译产物
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+
+# 其他
+node_modules/
