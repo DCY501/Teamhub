@@ -6,8 +6,8 @@
 
 | 层级 | 技术 |
 |-----|------|
-| 前端 | Vue 3.5 + TypeScript + Vite 8 + Element Plus 2.13 |
-| 后端 | Spring Boot 3.5 + Java 17 + MyBatis-Plus 3.5 + Spring Security |
+| 前端 | Vue 3.5.32 + TypeScript + Vite 8.0.8 + Element Plus 2.13.7 |
+| 后端 | Spring Boot 3.5.14 + Java 17 + MyBatis-Plus 3.5.12 + Spring Security 6.5 |
 | 数据库 | MySQL 8.0 |
 | 部署 | Nginx + systemd (Ubuntu 22.04) |
 
@@ -25,11 +25,11 @@
 
 ```
 Teamhub/
-├── teamhub-backend/          # Spring Boot 后端
+├── teamhub-backend/          # Spring Boot 后端（详见 [teamhub-backend/README.md](teamhub-backend/README.md)）
 │   ├── src/main/java/...     # Controller / Service / Mapper / Entity
 │   ├── pom.xml
 │   └── init.sql              # 数据库初始化脚本
-├── teamhub-frontend/         # Vue 3 前端
+├── teamhub-frontend/         # Vue 3 前端（详见 [teamhub-frontend/README.md](teamhub-frontend/README.md)）
 │   ├── src/views/            # 页面组件
 │   ├── src/router/           # 路由 + 导航守卫
 │   └── package.json
@@ -111,3 +111,7 @@ npm run dev
 
 - **Dochime**：后端开发、数据库设计、服务器部署
 - **uaena-IT**：前端开发、功能完善、测试用例
+
+---
+
+> 前后端详细说明请分别查看 [`teamhub-backend/README.md`](teamhub-backend/README.md) 和 [`teamhub-frontend/README.md`](teamhub-frontend/README.md)。

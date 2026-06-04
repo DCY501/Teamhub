@@ -84,6 +84,17 @@
 			<artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
 			<version>4.4.0</version>
 		</dependency>
+		<!-- 显式升级 SpringDoc 以兼容 Spring Boot 3.5+ / Spring Framework 6.2+ -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+			<version>2.7.0</version>
+		</dependency>
 
 		<!-- JWT -->
 		<dependency>
