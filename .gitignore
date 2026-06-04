@@ -8,6 +8,14 @@ teamhub-backend/target/
 teamhub-backend/.idea/
 teamhub-backend/.mvn/
 
+# 报告及文档
+TeamHub_报告完整版.tex
+云服务器操作指南.md
+已实现功能清单.md
+软件工程报告框架_详细版.md
+软件工程方案设计.md
+截图/
+
 # 报告编译产物
 *.aux
 *.log
